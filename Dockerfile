@@ -10,5 +10,6 @@ RUN npm run build
 
 # run step
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
 # No default command is needed as the nginx image already runs the correct one
